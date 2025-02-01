@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,30 +11,32 @@ export default function Footer() {
             </Link>
           </div>
           <nav>
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-16">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Privacy Policy
+                <Link
+                  href="https://x.com/AmithBV0606"
+                  className="text-gray-400 hover:text-white hover:underline transition-colors"
+                >
+                  Twitter
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                <Link
+                  href="https://github.com/AmithBV0606"
+                  className="text-gray-400 hover:text-white hover:underline transition-colors"
+                >
+                  GitHub
                 </Link>
               </li>
             </ul>
           </nav>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Pill-Buddy. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Pill-Buddy. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

@@ -38,19 +38,37 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <nav className="md:hidden inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 z-0">
-          <ul className="flex flex-col items-center py-4">
-            {["Features", "Download"].map((item) => (
-              <li key={item} className="py-2">
-                <Link
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-blue-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
+        <nav className="md:hidden inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 z-0 h-screen flex items-center justify-center">
+          <ul className="flex flex-col items-center gap-6 py-4">
+            <li className="py-2">
+              <Link
+                href={"#features"}
+                className="hover:text-blue-500 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </Link>
+            </li>
+
+            <li className="py-2">
+              <Link
+                href={"#download"}
+                className="hover:text-blue-500 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Download
+              </Link>
+            </li>
+
+            <li className="py-2">
+              <Link
+                href={"https://github.com/AmithBV0606"}
+                className="hover:text-blue-500 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                GitHub
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
