@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-3xl">
@@ -18,7 +18,10 @@ export default function Header() {
           <ul className="flex space-x-8">
             {["Features", "Download"].map((item) => (
               <li key={item}>
-                <Link href={`#${item.toLowerCase()}`} className="hover:text-blue-500 hover:underline transition-colors">
+                <Link
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-blue-500 hover:underline transition-colors"
+                >
                   {item}
                 </Link>
               </li>
@@ -26,17 +29,24 @@ export default function Header() {
           </ul>
         </nav>
 
-        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className="md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           {isMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <nav className="md:hidden inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 z-0 h-screen">
+        <nav className="md:hidden inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 z-0">
           <ul className="flex flex-col items-center py-4">
             {["Features", "Download"].map((item) => (
               <li key={item} className="py-2">
-                <Link href={`#${item.toLowerCase()}`} className="hover:text-blue-500 transition-colors">
+                <Link
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-blue-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item}
                 </Link>
               </li>
@@ -44,8 +54,6 @@ export default function Header() {
           </ul>
         </nav>
       )}
-
     </header>
-  )
+  );
 }
-

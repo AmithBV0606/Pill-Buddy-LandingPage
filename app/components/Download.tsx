@@ -11,7 +11,7 @@ export default function Download() {
           Ready to Take Control?
         </h2>
 
-        <p className="text-xl mb-8 text-gray-300 mx-32 leading-loose">
+        <p className="text-base md:text-xl mb-8 text-gray-300 text-left md:text-justify leading-6 md:leading-loose">
           Download Pill-Buddy now and start managing your medications with ease.
           Download Pill-Buddy today and take control of your medication schedule
           effortlessly. This app helps you track your doses and set reminders,
