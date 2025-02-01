@@ -24,14 +24,14 @@ const features = [
 export default function Features() {
   return (
     <section id="features" className="py-16 md:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/80 to-purple-500/30 z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Features</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="backdrop-blur-md bg-white/10 p-6 rounded-lg shadow-lg"
+              className="backdrop-blur-2xl bg-black/80 p-6 rounded-3xl shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
