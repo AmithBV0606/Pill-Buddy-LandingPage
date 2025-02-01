@@ -2,10 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Github, Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const router = useRouter();
 
   return (
     <header className="fixed w-full z-50 bg-black/80 backdrop-blur-3xl">
@@ -14,26 +17,36 @@ export default function Header() {
           Pill-Buddy
         </Link>
 
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            {["Features", "Download"].map((item) => (
-              <li key={item}>
-                <Link
-                  href={`#${item.toLowerCase()}`}
-                  className="hover:text-blue-500 hover:underline transition-colors"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="flex justify-end items-center gap-6">
+          <Link href={"https://github.com/AmithBV0606/Pill-Buddy"} target="_blank">
+            <button className="bg-gray-800/40 px-6 py-3 rounded-xl flex items-center gap-3 border-2 border-blue-500/80 hover:bg-gray-800/90">
+              <Github />
+
+              <span>GitHub</span>
+            </button>
+          </Link>
+
+          <nav className="hidden md:block">
+            <ul className="flex space-x-6">
+              {["Features", "Download"].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`#${item.toLowerCase()}`}
+                    className="hover:text-blue-500 hover:underline transition-colors"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
 
         <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X /> : <Menu />}
+          {isMenuOpen ? <X /> : <Menu size={40}/>}
         </button>
       </div>
 
@@ -62,11 +75,12 @@ export default function Header() {
 
             <li className="py-2">
               <Link
-                href={"https://github.com/AmithBV0606"}
+                href={"https://x.com/AmithBV0606"}
                 className="hover:text-blue-500 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
+                target="_blank"
               >
-                GitHub
+                Twitter
               </Link>
             </li>
           </ul>

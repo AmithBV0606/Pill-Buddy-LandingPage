@@ -16,14 +16,16 @@ export default function Footer() {
                 <Link
                   href="https://x.com/AmithBV0606"
                   className="text-gray-400 hover:text-white hover:underline transition-colors"
+                  target="_blank"
                 >
                   Twitter
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://github.com/AmithBV0606"
+                  href="https://github.com/AmithBV0606/Pill-Buddy"
                   className="text-gray-400 hover:text-white hover:underline transition-colors"
+                  target="_blank"
                 >
                   GitHub
                 </Link>
