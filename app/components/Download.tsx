@@ -22,7 +22,7 @@ export default function Download() {
         </p>
 
         <motion.a
-          href="/application-78d9b275-1be2-4063-aefc-8b973003998e.apk"
+          href="/application-d2195236-3939-4569-9374-3a4c91243ec0.apk"
           download
           className="inline-flex items-center bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors"
           whileHover={{ scale: 1.05 }}
